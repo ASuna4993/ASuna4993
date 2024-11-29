@@ -6,7 +6,7 @@ const FROM_EMAIL = "test@token.co.jp";
 
 // ファイル関連の定数
 const FILE_CONFIG = {
-    URL: 'https://sunajpdev.github.io/応募フォーム.pdf',
+    URL: 'https://asuna4993.github.io/ASuna4993/%E5%BF%9C%E5%8B%9F%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0.pdf',
     NAME: '営業部紹介資料.pdf',
     MIME_TYPE: 'application/pdf'
 };
@@ -20,6 +20,9 @@ ${name} 様
 選考日程の詳細について、弊社担当者より後日ご連絡させていただきます。
 営業部の紹介資料を添付いたします。ご一読いただけると幸いです。
 よろしくお願いいたします。
+
+
+資料URL: ${FILE_CONFIG.URL}
 `;
 
 // フォーム送信時の処理
@@ -71,11 +74,11 @@ function onFormSubmit(e) {
             from: FROM_EMAIL,
             subject: EMAIL_TITLE,
             body: body,
-            attachments: [{
-                fileName: FILE_CONFIG.NAME,
-                content: pdfBlob.getBytes(),
-                mimeType: FILE_CONFIG.MIME_TYPE
-            }]
+            // attachments: [{
+            //     fileName: FILE_CONFIG.NAME,
+            //     content: pdfBlob.getBytes(),
+            //     mimeType: FILE_CONFIG.MIME_TYPE
+            // }]
         });
         
     } catch (error) {
