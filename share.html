@@ -2,17 +2,64 @@
 <html>
 <head>
     <title>応募フォーム　シェアー</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 30px;
+        }
+        .share-text {
+            font-size: 2rem;
+        }
+
+        /* シェアボタンのスタイル */
+        .share-button {
+            width: 100%;
+            padding: 15px;
+            font-size: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .share-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* タップ時のハイライトを防ぐ */
+        .share-button:active {
+            background-color: #004085;
+        }
+    </style>    
 </head>
-<body>
-    <h1>応募フォーム　シェアー</h1>
+<body class="">
+    <h1>採用紹介のしくみ</h1>
     <div>
-        説明の文言が入る。
-        シェアーは、パラメータをつけて、LPのページをシェアする
+        <p class="share-text">
+            ・直接紹介<br />
+            　１回100,000 99,999万円<br />
+             年間5 99回までであれば可能<br />
+            ・間接紹介<br />
+            　年間5回までであれば可能。<br />
+            奨励金は社員への奨励金と同額<br />
+        </p>
     </div>
 
-
     <button id="webShareButton" class="share-button">
-        ランディングページをシェアする
+        紹介者にシェアする
     </button>
 
 </body>
