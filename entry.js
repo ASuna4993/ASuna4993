@@ -46,6 +46,11 @@ function initializeForm() {
     if (form) {
         submitForm(form);
     }
+
+    // 代理応募(appType=1)の場合は、bodyにclass entry_open 追加
+    if (params.appType === '1') {
+        document.body.classList.add('entry_open');
+    }
 }
 
 // 本人承諾のチェック
